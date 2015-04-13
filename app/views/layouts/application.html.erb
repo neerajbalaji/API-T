@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-  <title> Muse </title>
+  <title> Tag It </title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet">
@@ -9,22 +9,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <div class="wrapper clearfix">
-      <div id="logo">
-        <%= link_to "Muse", root_path %>
-      </div>
-      <nav>
-        <% if user_signed_in? %>
-          <%= link_to current_user.name, edit_user_registration_path %>
-          <%= link_to "Add New Inspiration", new_post_path, class: "button" %>
-        <% else %>
-          <%= link_to "Sign in", new_user_session_path %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "button" %>
-        <% end %>
-      </nav>
+  
+  
+  
+  
+  
+  
+ 
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-brand" id="logo">
+      <%= link_to "Tag It", root_path %>
     </div>
-  </header>
+    <% if user_signed_in? %>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+         <%= link_to current_user.name, edit_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to "Add New Inspiration", new_post_path, class: "button" %>
+        </li>
+        <li>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "Sign Up", new_user_registration_path, class: "button" %>
+        </li>
+        <li>
+         <%= link_to "Sign in", new_user_session_path %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</nav>
   <p class="notice">
     <%= notice %>
   </p>
