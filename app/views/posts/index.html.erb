@@ -1,23 +1,26 @@
-
-
+<!--<%= link_to href: '' do %>-->
+<%= image_tag 'drag.gif',:align=> "center", height:200,width:200,id: "drg"%>
+<% end %>
 <% if user_signed_in? %>
+<!--section-start-->
   <p id="intro">
     Hello
     <%= current_user.name %>
     <br/>
-    <span>
+    <h2>
       Share your inspiration and see what's inspiring others.
-    </span>
+    </h2>
   </p>
 <% else %>
   <p id="intro">
-    What's your tag?
-    <br/>
-    <span>
+    <h3 style="text-align:center">What's your tag?<h3>
+    
+    <h2 style="text-align:center">
       Share your inspiration and see what's inspiring others.
-    </span>
+    <h2>
   </p>
 <% end %>
+      <!--section end-->
 <div id="posts">
   <% @posts.each do |post| %>
     <div class="post">

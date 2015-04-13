@@ -4,7 +4,7 @@
   <title> Tag It </title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet">
+ <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet">-->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
@@ -19,7 +19,7 @@
   <nav class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-brand" id="logo">
-      <%= link_to "Tag It", root_path %>
+      <%= link_to "Tag It" ,root_path, id: "logo" %>
     </div>
     <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
@@ -27,19 +27,19 @@
          <%= link_to current_user.name, edit_user_registration_path %>
         </li>
         <li>
-          <%= link_to "Add New Inspiration", new_post_path, class: "button" %>
+          <%= link_to "Add New Inspiration", new_post_path, class: "button", id: "logo" %>
         </li>
         <li>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete , id: "logo"%>
         </li>
       </ul>
     <% else %>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to "Sign Up", new_user_registration_path, class: "button" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "button", id: "logo" %>
         </li>
         <li>
-         <%= link_to "Sign in", new_user_session_path %>
+         <%= link_to "Sign in", new_user_session_path , id: "logo"%>
         </li>
       </ul>
     <% end %>
