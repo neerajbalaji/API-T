@@ -1,11 +1,11 @@
 /*
  *= require_self
  */
-
+$light: #EDEFF5;
 body {
-	font-family: "Proxima Nova";
+	font-family: "Helvetica";
 	font-weight: 100;
-  background-image:image-url('MJ.gif') no-repeat center center fixed; 
+  background-image:image-url('MJ.gif'); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,6 +14,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
+  color:#FFFFFF;
 }
 
 .wrapper {
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #9B9B9B;
 }
 #logo{
-  color: #ffffff;
+  color: #000000;
   
 }
 #drg{
@@ -70,7 +71,7 @@ header {
 		a {
       margin-left: 1.5rem;
 			line-height: 2;
-			color: #BD1E23;
+			color: #FFFFFF;
 			font-weight: bold;
 			&:hover {
 				text-decoration: none;
@@ -92,9 +93,88 @@ header {
 		}
 	}
 }*/
-@import 'nav.css';
+.field {
+	margin: 1rem 0 1.5rem 0;
+}
+
+input[type="email"], input[type="text"], input[type="password"], textarea {
+	width: 20rem;
+	height: 2.5rem;
+	padding: .25rem 1rem;
+	border: 1px solid darken($light, 5%);
+	border-radius: .35rem;
+	margin-top: .5rem;
+}
+
+textarea {
+	min-height: 8rem;
+  min-width:8rem;
+	margin-top: .5rem !important;
+}
+
+#form {
+	padding: 0 0 10rem 0;
+}
+
+.sleep-video {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            background:#000;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            overflow: hidden;
+            background-attachment: fixed;
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+
+        }
+label{
+  color:#000000;
+  font-size:20px;
+}
+.area{
+  text-align:center;
+  font-size:6.5em;
+  color:#fff;
+  letter-spacing: -7px;
+  font-weight:700;
+  text-transform:uppercase;
+  animation:blur .75s ease-out infinite;
+  text-shadow:0px 0px 5px #fff,
+      0px 0px 7px #fff;
+}
+
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;}
+}
+
 @import 'post.css.scss';
+
+
 @import 'home.css.scss';
+@import 'nav.css';
 
 @import 'youtube-video-gallery.css';
 @import 'timeline.css';

@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'angularjs-rails', '~> 1.3.15'
 gem 'jbuilder', '~> 2.0'
+gem 'aws-s3', '~> 0.6.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'haml', '~> 4.0.5'

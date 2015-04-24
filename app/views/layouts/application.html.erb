@@ -9,14 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   
-  
-  
-  
-  
-  
- 
-  <nav class="navbar navbar-inverse">
+  <video class="sleep-video" autoplay loop>
+    <source src="http://r2---sn-jna-i3bs.googlevideo.com/videoplayback?mime=video%2Fmp4&dur=20.020&lmt=1403778812007808&pcm2cms=yes&upn=A7Y1OJh49GQ&sparams=clen%2Cdur%2Cgir%2Cid%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Csource%2Cupn%2Cexpire&clen=6071154&expire=1429900169&itag=137&key=yt5&ipbits=0&fexp=900720%2C901802%2C907263%2C924637%2C934954%2C936117%2C938028%2C9405861%2C9406720%2C9407115%2C9407432%2C9408142%2C9408254%2C9408347%2C9408704%2C9408715%2C9412533%2C9412774%2C946008%2C947233%2C948124%2C948703%2C951703%2C952612%2C952637%2C957201&ip=110.4.12.177&gir=yes&source=youtube&mm=31&id=o-AGIRv2k50KZ_QQVZchHUXEnkLb1iEK2ARkEIUN79GiJY&ms=au&mt=1429878398&mv=u&pl=24&sver=3&signature=E2BBAD7C7378F3552305FAE5BA17BF61403CBDB2.46BEC2D92DA3057CD313EB58F9DD89056817B514&title=Video+Background+HD+1080+%2340+Loop+AMAZING">
+
+</video>
+
+  <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-brand" id="logo">
       <%= link_to "Tag It" ,root_path, id: "logo" %>
@@ -41,6 +41,9 @@
         <li>
          <%= link_to "Sign in", new_user_session_path , id: "logo"%>
         </li>
+        <li>
+          <%= link_to "Share", "/share" %>
+        </li>
       </ul>
     <% end %>
   </div>
@@ -54,5 +57,11 @@
   <div class="wrapper">
     <%= yield %>
   </div>
+  
 </body>
+  <script>
+      $().ready(function() {
+                $('#wrapper').tubular({videoId: 'ko8zeaXbB1Y'}); // where idOfYourVideo is the YouTube ID.
+        });
+      </script>
 </html>

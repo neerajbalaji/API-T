@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'songs/index'
+
+  get 'songs/upload'
+
+  get 'songs/delete'
+
+  match "songs/upload",:via => [:post], :as => "upload"
+match "songs/delete",:via => [:get], :as => "delete"
+  match "/share" => "songs#index", via: [:get]
+
+  
   devise_for :users
   resources :posts do
   	member do
