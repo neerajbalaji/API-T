@@ -22,10 +22,7 @@ module Muse
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
-    AWS::S3::Base.establish_connection!(
-    :access_key_id     => 'AKIAJFBH5FXJCPZ4CPEA',
-    :secret_access_key => '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'
-)
+   
     config.bucket = 'apiapi'
   end
 end
